@@ -1,0 +1,39 @@
+name: release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'dist/**'
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Create combined index
+        run: |
+          tar cvzf index-web.tgz dist/*.json
+
+      - name: Set release info
+        run: |
+          echo "RELEASE_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_ENV
+          echo "RELEASE_TAG=$(date -u +%Y%m%d-%H%M%S)" >> $GITHUB_ENV
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          fail_on_unmatched_files: true
+          files: |
+            index-web.tgz
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: Release ${{ env.RELEASE_DATE }}
+          body: |
+            Automatically created on ${{ env.RELEASE_DATE }}
+          draft: false
+          prerelease: false
