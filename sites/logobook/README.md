@@ -10,4 +10,5 @@ http://www.logobook.com/
 * Logo pages look like `http://www.logobook.com/logo/azady-hotel/`
 * Logo images look like `http://www.logobook.com/wp-content/uploads/2017/03/Azady_Hotel_logo.svg`
 * Logo pages have link to image in `<meta name="twitter:image"`
+* Logo pages have title of image in `<meta name="twitter:title"`
 
