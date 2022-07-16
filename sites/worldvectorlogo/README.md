@@ -12,3 +12,4 @@ https://worldvectorlogo.com/
 * Logo images look like `https://worldvectorlogo.com/download/aws-route53.svg`
 * Images also available via CDN: `https://cdn.worldvectorlogo.com/logos/aws-route53.svg`
 * CDN link has `class="larger"` on the img tag
+* Logo names can be found within the title tag
