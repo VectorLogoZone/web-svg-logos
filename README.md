@@ -1,5 +1,7 @@
 # Web SVG Logos
 
+[![release](https://github.com/VectorLogoZone/web-svg-logos/actions/workflows/release.yaml/badge.svg)](https://github.com/VectorLogoZone/web-svg-logos/actions/workflows/release.yaml)
+
 This repo has code to index various logo websites for [LogoSearch](https://logosear.ch/).
 
 ## Organization
