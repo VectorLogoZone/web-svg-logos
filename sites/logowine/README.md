@@ -1,4 +1,4 @@
-# LogoWiki
+# Logowine
 
 https://www.logo.wine/
 
