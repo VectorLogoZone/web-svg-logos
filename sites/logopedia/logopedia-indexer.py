@@ -39,7 +39,7 @@ for subdir, dirs, files in os.walk(rootdir):
         img_tags = soup.find_all(href=re.compile(".svg"))
         
         for img_tag in img_tags:
-            img = re.sub("/revision/.*", "", str(img_tag['href']))
+            img = img_tag['href']
 
             # find tag with the property "og:title"
             name_tag = soup.find("meta", {"property":"og:title"})
