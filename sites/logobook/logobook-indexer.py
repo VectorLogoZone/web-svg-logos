@@ -17,7 +17,7 @@ for subdir, dirs, files in os.walk(rootdir):
 
         # set file to search through as the path from rootdir to the current index.html file
         f = open(path_to_file)
-        
+
         # create the full url, taking out index.html from the file name
         src_url = "http://" + path_to_file.replace('index.html', '')
 
@@ -52,7 +52,7 @@ data = {
     'provider_icon': "https://logosear.ch/images/remote.svg",
     'url': "http://www.logobook.com/",
     'images': images,
-    'logo': "http://www.logobook.com/wp-content/themes/bespoke_1-1/images/logomark.svg",
+    'logo': "https://proxy.svg.zone/logobook/wp-content/themes/bespoke_1-1/images/logomark.svg",
     'website': "http://www.logobook.com/"
 }
 
@@ -63,4 +63,3 @@ outputfile = open(outputpath, 'w')
 
 json.dump(data, outputfile, sort_keys=True, indent=2)
 outputfile.close
- 
